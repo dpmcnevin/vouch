@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    vouch (0.0.3)
+    vouch (0.0.3.pre1)
 
 GEM
   remote: http://rubygems.org/

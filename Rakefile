@@ -10,6 +10,7 @@ begin
     gemspec.email = "dpmcnevin@gmail.com"
     gemspec.homepage = "http://github.com/dpmcnevin/vouch"
     gemspec.authors = ["Daniel McNevin"]
+    gemspec.add_dependency "oauth2"
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: gem install jeweler"

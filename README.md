@@ -17,7 +17,11 @@ To use, include in your `Gemfile`
 
     gem "vouch"
     
-Run the generator
+or, to get the latest changes:
+
+    gem "vouch", :git => "git://github.com/dpmcnevin/vouch.git"
+    
+Then, run the generator
 
     rails generate vouch:client
 

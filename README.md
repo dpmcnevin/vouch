@@ -1,6 +1,10 @@
 Vouch
 =====
 
+*Please Note*
+
+This is very alpha code at the moment, I just extracted it from a project I am working on.
+
 About
 -----
 
@@ -11,7 +15,7 @@ Client
 
 To use, include in your `Gemfile`
 
-    gem "vouch", :git => "git://github.com/dpmcnevin/vouch.git"
+    gem "vouch"
     
 Run the generator
 
@@ -22,6 +26,12 @@ Provider
 --------
 
 Coming in future releases.
+
+Acknowledgements
+----------------
+
+OAuth2 gem
+
 
 Maintainer
 ----------

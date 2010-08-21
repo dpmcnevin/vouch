@@ -1,14 +1,16 @@
 require "bundler"
+require 'jeweler'
 Bundler.setup
 
-require "rspec/core/rake_task"
-Rspec::Core::RakeTask.new(:spec)
-
-gemspec = eval(File.read("newgem.gemspec"))
-
-task :build => "#{gemspec.full_name}.gem"
-
-file "#{gemspec.full_name}.gem" => gemspec.files + ["newgem.gemspec"] do
-  system "gem build newgem.gemspec"
-  system "gem install newgem-#{NewGem::VERSION}.gem"
+begin
+  Jeweler::Tasks.new do |gemspec|
+    gemspec.name = "vouch"
+    gemspec.summary = "OAuth2 Server and Client Engines"
+    gemspec.description = "OAuth2 Server and Client Engines"
+    gemspec.email = "dpmcnevin@gmail.com"
+    gemspec.homepage = "http://github.com/dpmcnevin/vouch"
+    gemspec.authors = ["Daniel McNevin"]
+  end
+rescue LoadError
+  puts "Jeweler not available. Install it with: gem install jeweler"
 end

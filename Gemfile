@@ -5,6 +5,7 @@ source "http://rubygems.org"
 gem "vouch", :path => File.expand_path("..", __FILE__)
 
 # These are development dependencies
+gem "jeweler"
 gem "rake"
 gem "oauth2"
 

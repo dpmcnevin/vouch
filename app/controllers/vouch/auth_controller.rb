@@ -24,6 +24,7 @@ module Vouch
           @user = User.find_or_create_by_email(user)
           session[:user_id] = @user.id
           session[:expires_at] = access_token.expires_at
+          @user.update_attributes(user)
           redirect_to session[:return_to] || root_path
         else
           render :text => "Unauthorized", :status => 401

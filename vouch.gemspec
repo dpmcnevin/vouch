@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{vouch}
-  s.version = "0.0.3.pre1"
+  s.version = "0.0.3.pre2"
 
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
   s.authors = ["Daniel McNevin"]
-  s.date = %q{2010-08-22}
+  s.date = %q{2010-09-27}
   s.description = %q{OAuth2 Server and Client Engines}
   s.email = %q{dpmcnevin@gmail.com}
   s.extra_rdoc_files = [
@@ -45,11 +45,14 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<oauth2>, ["~> 0.0.13"])
+      s.add_runtime_dependency(%q<json>, ["~> 1.4.6"])
     else
       s.add_dependency(%q<oauth2>, ["~> 0.0.13"])
+      s.add_dependency(%q<json>, ["~> 1.4.6"])
     end
   else
     s.add_dependency(%q<oauth2>, ["~> 0.0.13"])
+    s.add_dependency(%q<json>, ["~> 1.4.6"])
   end
 end
 
